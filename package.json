@@ -36,7 +36,7 @@
     "prepare": "rollup -c",
     "lint": "denolint && tsc --noEmit test/index.ts",
     "check": "teru test/index.cjs && teru-esm test/*.js",
-    "cover": "teru test/index.cjs && teru-esm test/*.js",
+    "cover": "c8 teru-esm test/*.js",
     "test": "denolint && tsc --noEmit test/index.ts && teru test/index.cjs && c8 teru-esm test/*.js"
   },
   "c8": {
