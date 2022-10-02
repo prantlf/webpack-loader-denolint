@@ -38,7 +38,7 @@ yarn add -D webpack-loader-denolint
 
 ## Usage
 
-Create a `rollup.config.js` [configuration file] and import the plugin:
+Create a `webpack.config.js` [configuration file] and enable the loader:
 
 ```js
 module.exports = {
@@ -61,7 +61,7 @@ module.exports = {
 }
 ```
 
-Then call `rollup` either via the [command-line] or [programmatically].
+Then call `webpack` either via the [command-line] or [programmatically].
 
 ## Options
 
@@ -157,6 +157,6 @@ Licensed under the [MIT License].
 [NPM]: https://www.npmjs.com/
 [PNPM]: https://pnpm.io/
 [Yarn]: https://yarnpkg.com/
-[configuration file]: https://www.rollupjs.org/guide/en/#configuration-files
-[command-line]: https://www.rollupjs.org/guide/en/#command-line-reference
-[programmatically]: https://www.rollupjs.org/guide/en/#javascript-api
+[configuration file]: https://webpack.js.org/configuration/
+[command-line]: https://webpack.js.org/api/cli
+[programmatically]: https://webpack.js.org/api/node
