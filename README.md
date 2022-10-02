@@ -7,7 +7,7 @@
 
 A [Webpack] loader to lint entry points and all imported files with [denolint].
 
-A lot faster than [eslint-loader], handling both JavaScript and TypeScript sources. Use [rollup-plugin-denolint] for [Rollup]. Or simpler, just the [command-line `denolint`].
+A lot faster than [eslint-loader], handling both JavaScript and TypeScript sources. Use [rollup-plugin-denolint] for [Rollup]. Use [esbuild-plugin-denolint] for [esbuild]. Or simpler, just the [command-line `denolint`].
 
 ## Synopsis
 
@@ -150,6 +150,8 @@ Licensed under the [MIT License].
 [Webpack]: https://webpack.js.org/
 [denolint]: https://github.com/prantlf/denolint/tree/master/packages/libdenolint#readme
 [eslint-loader]: https://github.com/webpack-contrib/eslint-loader#readme
+[esbuild-plugin-denolint]: https://github.com/prantlf/esbuild-plugin-denolint#readme
+[esbuild]: https://esbuild.github.io/
 [rollup-plugin-denolint]: https://github.com/prantlf/rollup-plugin-denolint#readme
 [Rollup]: https://rollupjs.org/
 [command-line `denolint`]: https://github.com/prantlf/denolint/tree/master/packages/denolint#readme
