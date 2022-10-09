@@ -102,6 +102,13 @@ Default: `true`
 
 Throw an error and abort if source file parsing failed fatally.
 
+### `format`
+
+Type: `string`<br>
+Default: `'pretty'`
+
+Format of the warning messages. Either `compact` or `pretty` (default).
+
 ### `formatter`
 
 Type: `boolean`<br>

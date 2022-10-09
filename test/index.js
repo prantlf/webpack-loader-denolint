@@ -76,6 +76,10 @@ test('fail', async () => {
   await rejects(build(configure('fail', { ignoreConfig: true }, true)))
 })
 
+test('fail compact', async () => {
+  await rejects(build(configure('fail', { format: 'compact', ignoreConfig: true }, true)))
+})
+
 test('fail silently', async () => {
   await build(configure('fail', { ignoreConfig: true, throwOnError: false }, true))
 })
@@ -90,7 +94,7 @@ test('explicit rules', async () => {
   }))
 })
 
-test('formatter of warnings', async () => {
+test('formatter of pretty warnings', async () => {
   let params
   await rejects(build(configure('warn', {
     ignoreConfig: true,
@@ -100,11 +104,28 @@ test('formatter of warnings', async () => {
     }
   })))
   strictEqual(params.warnings.length, 2)
+  ok(/\n.+\n/g.test(params.warnings[0]))
   ok(params.path.endsWith('test/samples/warn/ultimate.js'))
   strictEqual(typeof params.content, 'string')
 })
 
-test('formatter of errors', async () => {
+test('formatter of compact warnings', async () => {
+  let params
+  await rejects(build(configure('warn', {
+    ignoreConfig: true,
+    format: 'compact',
+    formatter: (warnings, path, content) => {
+      params = { warnings, path, content }
+      return warnings
+    }
+  })))
+  strictEqual(params.warnings.length, 2)
+  ok(!/\n.+\n/g.test(params.warnings[0]))
+  ok(params.path.endsWith('test/samples/warn/ultimate.js'))
+  strictEqual(typeof params.content, 'string')
+})
+
+test('formatter of pretty errors', async () => {
   let params
   await rejects(build(configure('fail', {
     ignoreConfig: true,
@@ -114,6 +135,23 @@ test('formatter of errors', async () => {
     }
   }, true)))
   strictEqual(params.errors.length, 1)
+  ok(!/\n.+\n/g.test(params.errors[0]))
+  ok(params.path.endsWith('test/samples/fail/ultimate.txt'))
+  strictEqual(typeof params.content, 'string')
+})
+
+test('formatter of compact errors', async () => {
+  let params
+  await rejects(build(configure('fail', {
+    ignoreConfig: true,
+    format: 'compact',
+    formatter: (errors, path, content) => {
+      params = { errors, path, content }
+      return errors
+    }
+  }, true)))
+  strictEqual(params.errors.length, 1)
+  ok(!/\n.+\n/g.test(params.errors[0]))
   ok(params.path.endsWith('test/samples/fail/ultimate.txt'))
   strictEqual(typeof params.content, 'string')
 })
