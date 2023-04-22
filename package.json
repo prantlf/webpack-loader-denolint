@@ -1,6 +1,6 @@
 {
   "name": "webpack-loader-denolint",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "A Webpack loader to lint entry points and all imported files with denolint.",
   "author": "Ferdinand Prantl <prantlf@gmail.com> (http://prantl.tk)",
   "license": "MIT",
