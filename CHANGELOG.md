@@ -1,3 +1,10 @@
+## [1.1.3](https://github.com/prantlf/webpack-loader-denolint/compare/v1.1.2...v1.1.3) (2023-10-08)
+
+
+### Bug Fixes
+
+* Upgrade dependencies ([15447d0](https://github.com/prantlf/webpack-loader-denolint/commit/15447d082273873e7b38443e612a5e90e5e9178c))
+
 ## [1.1.2](https://github.com/prantlf/webpack-loader-denolint/compare/v1.1.1...v1.1.2) (2023-05-20)
 
 
