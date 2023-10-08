@@ -67,21 +67,21 @@
   },
   "dependencies": {
     "loader-utils": "^3.2.1",
-    "libdenolint": "^2.0.10"
+    "libdenolint": "^2.0.12"
   },
   "devDependencies": {
     "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/git": "^10.0.1",
-    "@types/node": "^20.2.1",
-    "c8": "^7.13.0",
-    "denolint": "^2.0.10",
-    "memfs": "^3.5.1",
-    "rollup": "^3.22.0",
+    "@types/node": "^20.8.3",
+    "c8": "^8.0.1",
+    "denolint": "^2.0.12",
+    "memfs": "^4.6.0",
+    "rollup": "^4.0.2",
     "tehanu": "^1.0.1",
     "tehanu-repo-coco": "^1.0.0",
     "tehanu-teru": "^1.0.0",
-    "typescript": "^5.0.4",
-    "webpack": "^5.83.1",
+    "typescript": "^5.2.2",
+    "webpack": "^5.88.2",
     "webpack-loader-denolint": "link:"
   },
   "peerDependencies": {
